@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Esercizi di matematica e geometria per la scuola primaria e secondaria di primo grado.">
+  <meta name="keywords" content="esercizi, matematica, geometria, scuola, primaria, secondaria, primo grado">
+  <meta name="author" content="Vincenzo">
+  <meta name="robots" content="index, follow">
+  <title>Math & Geometry | Esercizi</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!--Bootstrap JS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <!-- Favicon-->
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+  <!-- Font Awesome icons (free version)-->
+  <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+
+  <!-- Google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+    type="text/css" />
+
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <link href="css/styles.css" rel="stylesheet" />
+
+  <!-- Script per la gestione degli esercizi -->
+  <script src="./js/esercizi.js"></script>
+</head>
+
+<body id="page-top">
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Math & Geometry Helper</a>
+      <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button"
+        data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
+        aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ms-auto">
+              <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="calcolatrice.html">Calcolatrice</a></li>
+              <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="Geometria.html">Geometria</a></li>
+              <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="esercizi.html">Esercizi</a></li>
+              <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="videolezioni.html">Biblioteca Digitale</a></li>
+              <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="mappa.html">Caccia al tesoro</a></li>
+          </ul>
+      </div>
+    </div>
+  </nav>
+  <header class="masthead bg-primary text-white text-center">
+    <div class="container d-flex align-items-center flex-column">
+
+      <h1>Esercizi di Matematica e Geometria</h1>
+      <h2>Mettiti alla prova con la nostra serie di esercizi</h2>
+      <h6>....mi raccomando non sbirciare le soluzioni...&#128540;</h6>
+    </div>
+  </header>
+  <section class="sezione-esercizi">
+    <div class="container text center mt-5 mb-5">
+      <div class="row">
+
+        <!-- Esercizio 1 -->
+        <div class="card">
+          <div class="card-header" style=" text-transform: uppercase; font-weight: bold;">
+            Esercizio 1
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Quanto fa 2 + 2?</h5>
+            <p class="card-text">
+              <input type="radio" name="esercizio1" value="3"> 3<br>
+              <input type="radio" name="esercizio1" value="4"> 4<br>
+              <input type="radio" name="esercizio1" value="5"> 5<br>
+            </p>
+            <button class="btn btn-primary btn-l font-weight-bold"
+              onclick="controllaSceltaMultipla(1, '4')">Controlla</button>
+            <p id="risposta1" class="risposta"></p>
+          </div>
+        </div>
+
+        <!-- Esercizio 2-->
+        <div class="card mt-3">
+          <div class="card-header" style=" text-transform: uppercase; font-weight: bold;">
+            Esercizio 2
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Completa l'equazione: 45 : ___ = 9</h5>
+            <p class="card-text">
+              <input type="text" id="esercizio2">
+            </p>
+            <button class="btn btn-primary btn-l font-weight-bold"
+              onclick="controllaRiempimento(2, '5')">Controlla</button>
+            <p id="risposta2" class="risposta"></p>
+          </div>
+        </div>
+
+        <!-- Esercizio 3-->
+        <div class="card mt-3">
+          <div class="card-header" style=" text-transform: uppercase; font-weight: bold;">
+            Esercizio 3
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Quanto fa 3 * 3?</h5>
+            <p class="card-text">
+              <input type="radio" name="esercizio3" value="6"> 6<br>
+              <input type="radio" name="esercizio3" value="7"> 7<br>
+              <input type="radio" name="esercizio3" value="9"> 9<br>
+            </p>
+            <button class="btn btn-primary btn-l font-weight-bold"
+              onclick="controllaSceltaMultipla(3, '9')">Controlla</button>
+            <p id="risposta3" class="risposta"></p>
+          </div>
+        </div>
+
+        <!-- Esercizio 4-->
+        <div class="card mt-3">
+          <div class="card-header" style=" text-transform: uppercase; font-weight: bold;">
+            Esercizio 4
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Scrivi l'area del rettangolo</h5>
+            <p class="card-text">
+              <input type="text" id="esercizio4">
+            </p>
+            <button class="btn btn-primary btn-l font-weight-bold"
+              onclick="controllaRiempimento(4, 'base x altezza')">Controlla</button>
+            <p id="risposta4" class="risposta"></p>
+          </div>
+        </div>
+
+        <!-- Esercizio 5-->
+        <div class="card mt-3">
+          <div class="card-header" style=" text-transform: uppercase; font-weight: bold;">
+            Esercizio 5
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Scrivi il perimetro del quadrato</h5>
+            <p class="card-text">
+              <input type="text" id="esercizio5">
+            </p>
+            <button class="btn btn-primary btn-l font-weight-bold"
+              onclick="controllaRiempimento(5, 'lato x 4')">Controlla</button>
+            <p id="risposta5" class="risposta"></p>
+          </div>
+        </div>
+
+        <!-- Esercizio 6-->
+        <div class="card mt-3">
+          <div class="card-header" style=" text-transform: uppercase; font-weight: bold;">
+            Esercizio 6
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Scrivi il perimetro del rettangolo</h5>
+            <p class="card-text">
+              <input type="text" id="esercizio6">
+            </p>
+            <button class="btn btn-primary btn-l font-weight-bold"
+              onclick="controllaRiempimento(6, '(base + altezza) x 2')">Controlla</button>
+            <p id="risposta6" class="risposta"></p>
+          </div>
+        </div>
+
+        <!-- Esercizio 7-->
+        <div class="card mt-3">
+          <div class="card-header" style=" text-transform: uppercase; font-weight: bold;">
+            Esercizio 7
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Risolvi la seguente espressione:</h5>
+            <p class="card-text">
+            <p>2x + 3 = 7</p>
+            <input type="text" id="esercizio7">
+            </p>
+            <button class="btn btn-primary btn-l font-weight-bold"
+              onclick="controllaRiempimento(7, '2')">Controlla</button>
+            <p id="risposta7" class="risposta"></p>
+          </div>
+        </div>
+
+        <!-- Esercizio 8-->
+        <div class="card mt-3">
+          <div class="card-header" style=" text-transform: uppercase; font-weight: bold;">
+            Esercizio 8
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Quale delle seguenti affermazioni e' giusta?</h5>
+            <p class="card-text">
+              <input type="radio" name="esercizio8" value="1"> Il triangolo scaleno ha 3 lati uguali<br>
+              <input type="radio" name="esercizio8" value="2"> Il triangolo scaleno non ha nessun lato uguale<br>
+              <input type="radio" name="esercizio8" value="3"> Il triangolo ha 2 lati uguali<br>
+            </p>
+            <button class="btn btn-primary btn-l font-weight-bold"
+              onclick="controllaSceltaMultipla(8, '2')">Controlla</button>
+            <p id="risposta8" class="risposta"></p>
+          </div>
+        </div>
+
+
+        <!-- Esercizio 9-->
+        <div class="card mt-3">
+          <div class="card-header" style=" text-transform: uppercase; font-weight: bold;">
+            Esercizio 9
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Il Teorema di Pitagora afferma che:</h5>
+            <p class="card-text">
+              <input type="radio" name="esercizio9" value="1"> La somma dei quadrati dei cateti e' uguale al quadrato
+              dell'ipotenusa<br>
+              <input type="radio" name="esercizio9" value="2"> La somma dei cateti e' uguale all'ipotenusa<br>
+              <input type="radio" name="esercizio9" value="3"> La somma dei quadrati dei cateti e' uguale alla somma dei
+              cateti<br>
+            </p>
+            <button class="btn btn-primary btn-l font-weight-bold"
+              onclick="controllaSceltaMultipla(9, '1')">Controlla</button>
+            <p id="risposta9" class="risposta"></p>
+          </div>
+        </div>
+
+        <!-- Esercizio 10-->
+        <div class="card mt-3">
+          <div class="card-header" style=" text-transform: uppercase; font-weight: bold;">
+            Esercizio 10
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Scrivimi la sequenza di Fibonacci</h5>
+            <p class="card-text">
+              <input type="text" id="esercizio10">
+            </p>
+            <button class="btn btn-primary btn-l font-weight-bold"
+              onclick="controllaRiempimento(10, '1,1,2,3,5,8,13,21,34,55')">Controlla</button>
+            <p id="risposta10" class="risposta"></p>
+          </div>
+        </div>
+
+        <!-- Punteggio -->
+        <div class="card mt-4">
+          <div class="card-header" style=" text-transform: uppercase; font-weight: bold;">
+            Punteggio
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Il tuo punteggio e':</h5>
+            <p class="card-text">
+            <p id="punteggio">0</p>
+            </p>
+          </div>
+        </div>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary mt-4 text-uppercase" data-bs-toggle="modal"
+          data-bs-target="#exampleModal">
+          Soluzioni
+        </button>
+
+        <!-- link alla pagina degli esercizi extra -->
+        <div class="card mt-4">
+          <div class="card-body">
+            <h5 class="card-title">...e se non ne hai ancora abbastanza cimentati con altri esercizi extra......basta cliccare sul link qui sotto...&#128071;</h5>
+            <p class="card-text text-center">
+            <a class="fs-4" href="iMartinieserciziextra.html">Esercizi Extra</a>
+            </p>
+          </div>
+        </div>
+
+        <!-- Modale Soluzioni -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Soluzioni Esercizi</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <h6>Esercizio 1</h6>
+                <p>La risposta corretta e' 4</p>
+                <h6>Esercizio 2</h6>
+                <p>La risposta corretta e' 5</p>
+                <h6>Esercizio 3</h6>
+                <p>La risposta corretta e' 9</p>
+                <h6>Esercizio 4</h6>
+                <p>La risposta corretta e' base x altezza</p>
+                <h6>Esercizio 5</h6>
+                <p>La risposta corretta e' lato x 4</p>
+                <h6>Esercizio 6</h6>
+                <p>La risposta corretta e' (base + altezza) x 2</p>
+                <h6>Esercizio 7</h6>
+                <p>La risposta corretta e' 2</p>
+                <h6>Esercizio 8</h6>
+                <p>La risposta corretta e' 2</p>
+                <h6>Esercizio 9</h6>
+                <p>La risposta corretta e' 1</p>
+                <h6>Esercizio 10</h6>
+                <p>La risposta corretta e' 1,1,2,3,5,8,13,21,34,55</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+
+  <!-- About Section-->
+  <section class="page-section bg-primary text-white mb-0" id="about">
+    <div class="container">
+      <!-- About Section Heading-->
+      <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
+      <!-- Icon Divider-->
+      <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+        <div class="divider-custom-line"></div>
+      </div>
+      <!-- About Section Content-->
+      <div class="row">
+        <div class="col-lg-4 ms-auto">
+          <p class="lead">Benvenuti su Math & Geometry Helper, la vostra risorsa online per l'apprendimento e il
+            supporto in matematica. Che siate studenti delle scuole elementari, medie o appassionati di numeri, il
+            nostro obiettivo è quello di rendere la matematica accessibile e comprensibile per tutti.</p>
+        </div>
+        <div class="col-lg-4 me-auto">
+          <p class="lead">Crediamo che la matematica non sia solo una materia scolastica, ma uno strumento potente per
+            risolvere problemi quotidiani e comprendere meglio il mondo intorno a noi. Il nostro sito è progettato per
+            guidarvi attraverso ogni passo del vostro viaggio matematico, fornendo spiegazioni chiare, esempi pratici e
+            feedback immediato.</p>
+        </div>
+        <div class="col-lg-4 me-auto">
+          <p class="lead">Esplorate le nostre risorse, mettetevi alla prova con inostri quiz e non esitate a contattarci
+            per qualsiasi domanda o supporto. Insieme, possiamo trasformare le sfide matematiche in opportunità di
+            apprendimento e crescita.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contact Section-->
+  <section class="page-section" id="contact">
+    <div class="container">
+      <!-- Contact Section Heading-->
+      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contattaci</h2>
+      <!-- Icon Divider-->
+      <div class="divider-custom">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+        <div class="divider-custom-line"></div>
+      </div>
+      <!-- Contact Section Form-->
+      <div class="row justify-content-center">
+        <div class="col-lg-8 col-xl-7">
+          <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+            <!-- Name input-->
+            <div class="form-floating mb-3">
+              <input class="form-control" id="name" type="text" placeholder="Enter your name..."
+                data-sb-validations="required" />
+              <label for="name">Nome e Cognome</label>
+              <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+            </div>
+            <!-- Email address input-->
+            <div class="form-floating mb-3">
+              <input class="form-control" id="email" type="email" placeholder="name@example.com"
+                data-sb-validations="required,email" />
+              <label for="email">Indirizzo E-mail</label>
+              <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+              <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+            </div>
+            <!-- Phone number input-->
+            <div class="form-floating mb-3">
+              <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890"
+                data-sb-validations="required" />
+              <label for="phone">Numero di telefono</label>
+              <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+            </div>
+            <!-- Message input-->
+            <div class="form-floating mb-3">
+              <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..."
+                style="height: 10rem" data-sb-validations="required"></textarea>
+              <label for="message">Messaggio</label>
+              <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+            </div>
+            <!-- Submit success message-->
+            <!---->
+            <!-- This is what your users will see when the form-->
+            <!-- has successfully submitted-->
+            <div class="d-none" id="submitSuccessMessage">
+              <div class="text-center mb-3">
+                <div class="fw-bolder">Form submission successful!</div>
+                To activate this form, sign up at
+                <br />
+                <a
+                  href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+              </div>
+            </div>
+            <!-- Submit error message-->
+            <!---->
+            <!-- This is what your users will see when there is-->
+            <!-- an error submitting the form-->
+            <div class="d-none" id="submitErrorMessage">
+              <div class="text-center text-danger mb-3">Error sending message!</div>
+            </div>
+            <!-- Submit Button-->
+            <button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Invia</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer-->
+  <footer class="footer text-center">
+    <div class="container">
+      <div class="row">
+        <!-- Footer Location-->
+        <div class="col-lg-4 mb-5 mb-lg-0">
+          <h4 class="text-uppercase mb-4">Location</h4>
+          <p class="lead mb-0">
+            2215 John Daniel Drive
+            <br />
+            Clark, MO 65243
+          </p>
+        </div>
+        <!-- Footer Social Icons-->
+        <div class="col-lg-4 mb-5 mb-lg-0">
+          <h4 class="text-uppercase mb-4">Around the Web</h4>
+          <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-facebook-f"></i></a>
+          <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a>
+          <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a>
+          <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-dribbble"></i></a>
+        </div>
+        <!-- Footer About Text-->
+        <div class="col-lg-4 mb-5 mb-lg-0">
+          <h4 class="text-uppercase mb-4">About Our Team</h4>
+          <a class="btn btn-outline-light mx-1 me-auto mb-2" href="https://www.linkedin.com/in/marta-chiofalo/" target="_blank">Marta Chiofalo <i class="fab fa-fw fa-linkedin-in"></i></a>
+          <a class="btn btn-outline-light mx-1 me-auto mb-2" href="https://www.linkedin.com/in/vincenzo-tito-junior-developer/" target="_blank">Vincenzo Tito <i class="fab fa-fw fa-linkedin-in"></i></a>
+          <a class="btn btn-outline-light mx-1 me-auto mb-2" href="https://www.linkedin.com/in/paolo-pellican%C3%B2-17765822b/" target="_blank">Paolo Pellicanò <i class="fab fa-fw fa-linkedin-in"></i></a>
+          <a class="btn btn-outline-light mx-1 me-auto mb-2" href="https://www.linkedin.com/in/mario-vertaglia-56941a159/" target="_blank">Mario Vertaglia <i class="fab fa-fw fa-linkedin-in"></i></a>
+          <a class="btn btn-outline-light mx-1 me-auto mb-2" href="http://linkedin.com/in/emanuele-kamberi-4009702a0" target="_blank">Emanuele Kamberi <i class="fab fa-fw fa-linkedin-in"></i></a>
+      </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Copyright Section-->
+  <div class="copyright py-4 text-center text-white">
+    <div class="container"><small>Copyright &copy; Math & Geometry Helper 2024</small></div>
+  </div>
+
+</body>
+
+</html>
